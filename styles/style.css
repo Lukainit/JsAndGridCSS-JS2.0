@@ -1,0 +1,87 @@
+@import "./variables.css";
+
+@font-face {
+    font-family: "primary";
+    src: url(../public/fonts/Gotham-Thin.ttf);
+}
+
+@font-face {
+    font-family: "primary-light";
+    src: url(../public/fonts/Gotham-Light.ttf);
+}
+
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+}
+
+a {
+    text-decoration : none;
+    color : inherit;
+}
+
+img {
+    height: 110px;
+}
+
+li {
+    list-style-type : none ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: 100hv;
+    background: #222;
+
+}
+
+.container {
+    position: relative;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows:  minmax(300px, auto);
+    /* text-align: center; */
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+
+}
+
+.container .box {
+    color: #929796;
+    background: #333;
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.container .box:hover {
+    background: #e91e63;
+}
+
+.container .box img {
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+
+}
+
+.container .box:nth-child(1) {
+    grid-column: span 2;
+}
+
+.container .box:nth-child(2) {
+    grid-row: span 2;
+}
+
+.container .box:nth-child(3) {
+    grid-area: span 4;
+}
